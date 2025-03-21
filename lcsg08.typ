@@ -24,9 +24,6 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em/*, first-line-indent: 0.5in*/)
-
-// typst >= 0.13.0-rc1
 #set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
 
 #pagebreak()
