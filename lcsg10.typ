@@ -1,5 +1,4 @@
 #import "lib.typ": *
-#import "@preview/whalogen:0.1.0": ce
 #set page(
     "us-letter",
     numbering: "1"
