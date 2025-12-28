@@ -168,10 +168,12 @@ Collaborating, including explaining your own solution, is good for your learning
 Finally, we hope you have fun!
 Make sure you don't burn out and enjoy the time you have with your group.
 
-#problem_box[
-    The LeetCode Study Groups poster contains three data structures.
-    See if your group can name all three.
-    We will cover all of them.
+#strike[
+  #problem_box[
+    The LeetCode Study Groups poster contains two data structures.
+    See if your group can name them.
+    We will be going over both of these.
+  ]
 ]
 
 == What if I have questions?
