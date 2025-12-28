@@ -40,23 +40,23 @@ To do this, we need some definitions#footnote[
     A *graph* $G = (V, E)$ is a tuple of two elements:
 
     The *vertex set* $V$ contains elements called *vertices*, or nodes. \
-    The *edge set* $E$ contains elements called *edges*, denoted ${v_1, v_2}$.
-    Edges connect two vertices from $V$ (we write $v_1, v_2 in V$).
+    The *edge set* $E$ contains elements called *edges*, each of which is an unordered pair of two vertices, written like ${v_1, v_2}$.
+    Edges connect two vertices from the set $V$ (we say $v_1, v_2 in V$).
 
     When referring to a generic vertex we typically label it $v$.
     When referring to a pair of vertices we typically label them $u$ and $v$.
     When referring to a sequence of vertices, $v_1, v_2, dots$ are typically used.
 
-    Edges are typically labelled $e$ (if there's just one) or $e_1, e_2, dots$ likewise.
+    Edges are typically labelled $e$ (if there's just one) or $e_1, e_2, dots$ for multiple edges.
 ]
 
 #definition_box[
     The number of vertices in a graph, $|V|$, is called the *order* of the graph.
-    The number of edges $|E|$ is called the *degree*.
-    The number of edges connected to a vertex is also called the degree of that _vertex_.
+    The number of edges $|E|$ is called the *size*.
+    The number of edges connected to a vertex is called the degree of that vertex.
 ]
 
-It is technically possible to have "loops"; edges where both endpoints are the same.
+It is technically possible to have "self-edges"; edges where both endpoints are the same.
 Graphs including these loops are called multigraphs, and graphs without them are called simple graphs.
 We will only examine simple graphs.
 
@@ -85,14 +85,11 @@ Next, some basic results which will solidify your understanding:
 == Walks
 
 #definition_box[
-    A *walk* is a list of edges where each vertex ends where the previous begins.
-    The list of vertices $(v_1, v_2, dots, v_n)$ traversed by this walk is called its *vertex sequence*.
-
-    If all the edges are distinct, the walk is also called a *trail*.
-
-    A trail where $v_1 = v_n$ is called a *cycle*.
-
-    If the edges are also distinct, it is also called a *path*.
+    A *walk* is a sequence of edges where each edge ends where the next begins, forming a sequence of vertices.
+    The list of vertices $(v_1, v_2, dots, v_n)$ traversed by this walk is called its *vertex sequence*. \
+    If all the edges are distinct, the walk is also called a *trail*. \
+    A trail where $v_1 = v_n$ is called a *cycle*. \
+    If the edges of a walk are distinct, it can also be called a *path*.
 ]
 
 == Trees
@@ -100,7 +97,7 @@ Next, some basic results which will solidify your understanding:
 #definition_box[
     A *tree* is an *acyclic* graph.
     This means no cycles exist on a tree $G$.
-    This also means the path between any two distinct vertices is unique (otherwise, the concatenation of these two paths would create a cycle).
+    This also means the path between any two distinct vertices is unique (otherwise, the concatenation of two non-identical paths would create a cycle).
 ]
 
 == Colorings, in brief
@@ -115,7 +112,6 @@ Next, some basic results which will solidify your understanding:
 The chromatic number of the United States is 4, if any two states touching at more than one point are considered adjacent#footnote[
     #link("https://mathworld.wolfram.com/ContiguousUSAGraph.html")
 ].
-
 If you look at any map of the United States which colors states, you will find that no more than four colors are used.
 
 == Next weeks
@@ -147,7 +143,7 @@ class _Node {
 
 Notice each vertex/node is assigned a value.
 This is a feature of some graphs you will see in problems, but not others.
-Just remember that two nodes with the same value are not necessarily equivalent.
+Just remember that two nodes with the same value are not necessarily the same node.
 
 #problem_box(solution: [
     This is a doubly linked list.
@@ -156,7 +152,7 @@ Just remember that two nodes with the same value are not necessarily equivalent.
     The path graph $P_n$ is a graph where $n$ vertices are connected in a line, each only to the next and previous vertex.
     The cycle graph $C_n$ is similar except the first and last vertices are also connected.
 
-    If we assign data to each vertex and store these graphs in memory using a reference representation, they are identical to another data structure.
+    If we assign data to each vertex and store these graphs in memory using a reference representation, they are very similar to another data structure.
     Which one?
 ]
 
@@ -294,7 +290,7 @@ bfs()
     - State a way to assign its vertices into two sets and prove that that for any vertex $v$ in one set, all of its neighbors are in the other set.
     - Or, prove it is $2$-colorable; this is equivalent to bipartiteness.
 ])[
-    A *bipartite* graph is one whose edges can be split into two sets.
+    A *bipartite* graph is one whose vertices can be split into two sets.
     Vertices in one set do not connect to others in their set and _may_ connect to vertices in the other set.
     The two endpoints of any edge $e$ are in different sets.
 
@@ -318,7 +314,7 @@ bfs()
     Second hint: You need to choose between BFS and DFS.
     Which will find the next tree earliest?
 
-    Third hint: Whichever search you choose (there is a correct answer), you need to count your steps.
+    Third hint: Whichever search you choose (there is a correct answer), you need to count how many steps you take.
 ])[
     *Capstone*: #lc_link(675, "cut-off-trees-for-golf-event")
 ]
