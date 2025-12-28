@@ -75,7 +75,7 @@ There are basically three ways a technical interview problem can go:
     You stare in shock for minutes.
     You barely make any progress and get an auto-reject email 3 minutes later.
 
-It may seem like the first option is our goal, but it is totally infeasible to teach every algorithm in circulation today.
+It may seem like the first option is our goal, but it's infeasible to teach every algorithm in circulation today.
 Our goal is instead to teach you enough general patterns to make case 2 the norm; this is what interviewers are looking for anyway.
 They want to see that you know common techniques, not that you have memorized the entire LeetCode catalog.
 
