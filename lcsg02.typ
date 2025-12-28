@@ -23,7 +23,7 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
+#set par(leading: 1em, first-line-indent: (amount: 0.25in, all: true))
 
 #pagebreak()
 
@@ -36,7 +36,7 @@ Imagine goods flowing in and out of a business:
 
 - At any time, there is the inventory of items you have on hand.
 - You get shipments of new items to sell; these are added to your inventory.
-- You sell items; these are removed to your inventory.
+- You ship items out to customers; these are removed to your inventory.
 
 Then there are two very simple ways to manage this inventory#footnote[
     LIFO allows you to pretend your taxable income is lower when the price of the item is increasing.
@@ -62,9 +62,8 @@ These resemble two other structures you may be familiar with:
     This is a *stack*.
 
 #definition_box[
-    The *queue* is the linear *LIFO* data structure. \
+    The *queue* is the linear *LIFO* data structure.
     The *stack* is the linear *FIFO* data structure.
-
     In both cases, but particularly with a stack, we talk about #strong[push]ing (adding) and #strong[pop]ping (removing) elements.
     We also may be interested in #strong[peek]ing at whether we can remove an element from the queue or stack, _without actually removing it_.
     The current size of a queue or stack is usually available also.
@@ -125,12 +124,13 @@ Python code for the above:
 
 You may also find the *double-ended queue* ("deque") useful in some circumstances.
 The upside of a deque is that values can be added and removed both at the front and back.
+It can also be used as a queue or stack.
 
 == Representation
 
-It is important to understand that a stack or queue is similar to the concept of an "interface" in OOP languages like Java.
-It is not so much a data structure with a unique character; it is more so an _interpretation_ of some kind of list (array, linked list, etc.) where we forgo random access (the ability to look at any index).
-If you are asked to implement a stack or queue, you will probably use an array or linked list.
+It is important to understand that a stack or queue is similar to the concept of an "interface" in Java.
+Stacks and queues are not exactly a unique data structure but are _interpretations_ of some underlying data structure.
+For example, an list could be used as a stack if we simply add or remove the last element.
 
 = Topic 2: Linked lists (very briefly)
 
@@ -139,13 +139,19 @@ If you are asked to implement a stack or queue, you will probably use an array o
     An *array* does not vary in length.
 ]
 
-We require arrays be contiguous in memory; that is, one element is stored right after the other.
-With linked lists, we break this constraint.
-We can store the elements anywhere we want, but each element must store both its contents and the location of the next element.
-To remember the list, we remember the location of the first element, the *head*.
-The last element is the *tail*.
+An array is defined to be contiguous in memory; that is, one element is stored right after the other, in their correct order.
+However, this means that if an array grows larger than the amount of space given, then the entire array has to be moved (_i.e._ copied) somewhere else where it's allowed to grow further.
+Linked lists are a way to avoid this.
+We break the constraint that elements all have to be stored together.
+We can store the elements anywhere we want, but now each element must store both a value and the location of the next element.
+The location of an element in memory is called a *pointer*.
 
-Storing only "forward" pointers makes it hard to move backwards in the list; we can store pointers to previous elements too and create a *doubly linked list*.
+To store the linked list as a whole, we remember the location of the first element, the *head*.
+The last element is the *tail*.
+We often store the location of the tail element as well.
+
+Storing only "forward" pointers makes it hard to move backwards in the list; we can also store pointers to the previous element, so that we can move backwards in the array, if we are willing to use more memory.
+This creates a *doubly linked list*.
 
 We could also link the head and tail, creating the *circular linked list*.
 This can also be singly or doubly linked.
@@ -174,7 +180,7 @@ The granular details of linked lists, such as their upsides and downsides over a
     #lc_link(2073, "time-needed-to-buy-tickets")
 
     You could simulate your own queue, but this would make your time complexity $O(t n)$ if $n$ people buy $t$ tickets each.
-    This is a good starting point, but you can solve this in $O(n)$.
+    That is a good starting point, but you can solve this in $O(n)$.
 ]
 
 == Capstone
@@ -182,14 +188,14 @@ The granular details of linked lists, such as their upsides and downsides over a
 You should attempt at least one of these, but preferably both.
 
 #problem_box[
-    *Capstone 1*: #lc_link(225, "implement-stack-using-queues")
-    Bonus points if you can find the one-queue solution too.
+    *Capstone 1*: #lc_link(225, "implement-stack-using-queues") \ 
+  Bonus points if you can find the one-queue solution too.
 
-    *Capstone 2*: #lc_link(232, "implement-queue-using-stacks")
+  *Capstone 2*: #lc_link(232, "implement-queue-using-stacks")
 ]
 
 == Challenge
 
 #problem_box[
-    *Challenge*: #lc_link(32, "longest-valid-parentheses")
+  *Challenge*: #lc_link(32, "longest-valid-parentheses")
 ]
