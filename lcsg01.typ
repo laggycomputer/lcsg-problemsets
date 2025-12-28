@@ -103,15 +103,14 @@ At minimum, read the *bolded* text to ensure you understand the core takeaways.
 == Problem set
 
 After the lecture and relevant exercises, we will present the problem set for the week.
-This will consist of curated LeetCode problems in which you can exercise your new and existing knowledge.
+This will consist of curated LeetCode problems, so you can exercise your new and existing knowledge.
 They are arranged in a recommended order in roughly increasing difficulty.
-Some problems are also placed after others because an insight from the former trivializes the latter.
+Some problems are also placed after others because an insight from one can help with subsequent problems.
 We may also offer a capstone problem which uses multiple concepts.
 If you solve this problem, you understand the week's topic(s) well.
 
 We understand if, due to time constraints, you and/or your group choose to skip some problems.
 If you decide to do this, we recommend you prioritize later problems and never forgo a capstone problem.
-We know we assign a lot of problems; our goal is never to overwork you.
 
 === How to solve problems, mentally
 
