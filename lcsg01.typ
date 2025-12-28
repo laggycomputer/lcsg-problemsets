@@ -31,7 +31,7 @@
 
 == Who are we?
 
-The #link("https://icssc.club/")[ICS Student Council] is the official registered campus organization of the students of the school of ICS.
+The #link("https://icssc.club/")[ICS Student Council] is the official registered campus organization of the students of the School of ICS.
 Among our goals is to:
 
 #quote()[
