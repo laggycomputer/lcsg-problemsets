@@ -301,7 +301,7 @@ bfs()
     Sorry in advance.
     You'll have to figure this one out.
 
-    #lc_link(1062, "flower-planting-with-no-adjacent")
+    #lc_link(1042, "flower-planting-with-no-adjacent")
 ]
 
 == Capstone
