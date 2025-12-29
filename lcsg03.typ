@@ -298,8 +298,8 @@ bfs()
 ]
 
 #problem_box[
-    Sorry in advance.
-    You'll have to figure this one out.
+    For this problem only, the graph may not be connected, meaning there may be a pair of vertices between which no pair exists.
+    This requires you to make a small change to your approach.
 
     #lc_link(1042, "flower-planting-with-no-adjacent")
 ]
