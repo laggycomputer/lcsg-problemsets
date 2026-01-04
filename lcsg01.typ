@@ -52,14 +52,6 @@ Your group was chosen with the following criteria in mind:
 - Your self-reported experience level.
 - Days of the week which you prefer and do not prefer.
 
-=== Some statistics
-
-#strike[
-  There are 142 of you, mostly third-years and above (75%).
-  The overwhelming majority of you are ICS majors, and most are computer science majors (59%).
-  The most requested topics were trees, dynamic programming, and graphs.
-]
-
 == Why do this?
 
 #figure(
