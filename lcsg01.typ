@@ -36,15 +36,15 @@ Among our goals is to:
 
 #quote()[
   Providing one another with tools and opportunities to become the most competitive technical experts in the world.
-] - #link("https://icssc.club/about")[ICSSC Constitution]
+] - ICSSC Constitution
 
 LeetCode study groups are run by the *Academic and Alumni Affairs* committee.
-You can see our membership on the #link("https://icssc.club/committees")[Committees] page.
+You can see our membership on the #link("https://icssc.club/about")[About] page.
 
 == Who are you?
 
 Before receiving this document you should have been placed in a study group.
-Throughout winter quarter, you will work on selected programmig exercises to improve your ability to solve challenges presented in technical interviews.
+Throughout winter quarter, you will work on selected programming exercises to improve your ability to solve challenges presented in technical interviews.
 Your group was chosen with the following criteria in mind:
 
 - Those who you asked to be grouped with.
