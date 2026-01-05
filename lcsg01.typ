@@ -23,7 +23,7 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
+#set par(leading: 1em)
 
 #pagebreak()
 
@@ -34,7 +34,7 @@
 The #link("https://icssc.club/")[ICS Student Council] is the official registered campus organization of the students of the School of ICS.
 Among our goals is to:
 
-#quote()[
+#quote[
   Providing one another with tools and opportunities to become the most competitive technical experts in the world.
 ] - ICSSC Constitution
 
@@ -52,6 +52,8 @@ Your group was chosen with the following criteria in mind:
 - Your self-reported experience level.
 - Days of the week which you prefer and do not prefer.
 
+#pagebreak()
+
 == Why do this?
 
 #figure(
@@ -62,12 +64,12 @@ Your group was chosen with the following criteria in mind:
 There are basically three ways a technical interview problem can go:
 
 + You have solved an identical or very similar problem before.
-You use this to easily solve the new problem.
+  You use this to easily solve the new problem.
 + You have the tools necessary to solve a problem and, after some thinking, you apply them.
-You solve the problem, albeit more slowly.
+  You solve the problem, albeit more slowly.
 + You are completely bewildered at a problem.
-You stare in shock for minutes.
-You barely make any progress and get an auto-reject email 3 minutes later.
+  You stare in shock for minutes.
+  You barely make any progress and get an auto-reject email 3 minutes later.
 
 It may seem like the first option is our goal, but it's infeasible to teach every algorithm in circulation today.
 Our goal is instead to teach you enough general patterns to make case 2 the norm; this is what interviewers are looking for anyway.
@@ -88,11 +90,9 @@ Any such question or excercise will look like this:
   solution: [Because they can't join tables.]
 )
 
-#strike[
-  You are free to complete or not complete any of these exercises, with your group or alone.
-  We will not ask for them.
-  Some material may overlap with ICS coursework, particularly ICS 6B/6D, 31-33, 46, and 161.
-]
+You are free to complete or not complete any of these exercises, with your group or alone.
+We will not ask for them.
+Some material may overlap with ICS coursework, particularly ICS 6B/6D, 31-33, 46, and 161.
 You know you and your group's own skills and shortcomings better than we do.
 At minimum, read the *bolded* text to ensure you understand the core takeaways.
 
@@ -166,12 +166,10 @@ Collaborating, including explaining your own solution, is good for your learning
 Finally, we hope you have fun!
 Make sure you don't burn out and enjoy the time you have with your group.
 
-#strike[
-  #problem_box[
-    The LeetCode Study Groups poster contains two data structures.
-    See if your group can name them.
-    We will be going over both of these.
-  ]
+#problem_box[
+  The LeetCode Study Groups poster contains two data structures.
+  See if your group can name them.
+  We will be going over both of these.
 ]
 
 == What if I have questions?
