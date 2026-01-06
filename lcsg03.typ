@@ -12,7 +12,6 @@
 #show link: set text(fill: blue)
 #show link: underline
 
-
 #let title = "LeetCode Study Groups, Week 3"
 #let authors = ("ICSSC AAA", ).join(", ")
 
@@ -54,8 +53,8 @@ To do this, we need some definitions#footnote[
     The number of edges connected to a vertex is called the degree of that vertex.
 ]
 
-It is technically possible to have "self-edges"; edges where both endpoints are the same.
-Graphs including these loops are called multigraphs, and graphs without them are called simple graphs.
+It is possible to have "self-edges"; edges where both endpoints are the same.
+Graphs including these self-edges are called multigraphs, and graphs without them are called simple graphs.
 We will only examine simple graphs.
 
 Next, some basic results which will solidify your understanding:
@@ -167,14 +166,17 @@ The element $A_(v u)$ will be set as well (meaning the matrix is symmetric), but
 
 When handling adjacency matrices in code, the vertices are often labelled $0$ to $n-1$ instead, since array indices count from 0 and not 1.
 
-=== Jagged arrays
+=== Jagged arrays (or adjacency lists)
 
 Another representation is with an array of arrays.
 These inner arrays are not all the same length; these are called jagged arrays.
+The upside of jagged arrays is that they use far, far less memory than adjacency matrices.
+Don't use a matrix unless your graph is small.
 
 Like the adjacency matrix form, the vertices must be numbered $0$ to $n-1$.
 The $i$th element of the outer array is an array of the neighbors of $i$.
 This is similar to the matrix representation, just that we no longer store the zeroes and simply store the position of the ones.
+In order to make searching easier, the inner lists should be sorted.
 
 This is a good format to work in for most problems.
 However, LeetCode usually doesn't give you this format.
@@ -187,6 +189,7 @@ In this format, you are simply given an array of arrays.
 Each inner array represents an edge.
 The inner arrays have length $2$ and simply contain the edge's endpoints.
 You are typically also given the order of the graph (the number of vertices).
+This format is not very useful for performing work, so it's usually best to convert this into something more convenient.
 
 == Traversing a graph
 
