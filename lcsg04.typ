@@ -53,7 +53,7 @@
 ]
 
 #problem_box[
-    Bonus: Euler's Theorem states that an Eulerian cycle exists on a simple graph $G$ if and only if there are zero vertices with odd degree.
+    Bonus, *only if you like proofs*: Euler's Theorem states that an Eulerian cycle exists on a simple graph $G$ if and only if there are zero vertices with odd degree.
     Based on the above, explain why.
 ]
 
@@ -78,33 +78,8 @@ The root is a grandparent or parent of every other node.
     In other words, it connects only to its parent.
 ]
 
-#problem_box(solution: [
-    We proceed by induction.
-    Throughout, let $G$ be a tree; an undirected, acyclic graph.
-
-    Base case: if $G = ({v}, emptyset)$ is a lone vertex, clearly $1 - 0 = 1$. \
-    Inductive step: Suppose we _add_ a vertex $v$ to $G$ to form $G prime$.
-    - Adding no new edges is not acceptable; then $G prime$ would be disconnected.
-    - Adding multiple new edges is not acceptable; then $G prime$ is not acyclic.
-    - We must add exactly one edge.
-    In this step from $G$ to $G prime$, we have incremented both the order and degree.
-    Thus their difference does not change. $square$
-
-    For those unfamiliar with induction, we have essentially shown that, for the most simple case of a lone vertex, the theorem is true.
-    We then showed that this implies, in a domino fashion, that the theorem is true on any more complex graph.
-
-    Conversely we could have done this reductively instead of reductively; removing vertices and edges until we reached the base case.
-    We will do something similar in the problem set.
-])[
-    A special case of Euler's formula states that for a nonempty#footnote[i.e. there is at least one vertex] tree $G$, $|V| - |E| = 1$.
-    Recall from last week that this means that the order is one more than the degree.
-    Explain why this is the case.
-
-    ICS 6B survivors: Use induction.
-]
-
-Finally, when you traverse a tree, you *do not* need to remember which vertices you have already visited.
-Since the tree is acyclic you can never reach a vertex by more than one path away from the root.
+When you traverse a tree, you *do not* need to remember which vertices you have already visited.
+Since the tree is acyclic, you can never reach a vertex by more than one path away from the root, so you will never revisit a vertex, so you will never need to prevent processing a vertex twice.
 
 == Directed graphs
 
@@ -115,7 +90,7 @@ This warrants some new definitions.
 
 #definition_box[
     On a simple directed graph $G = (V, E)$, the *indegree* of a vertex $v in V$ is the number of edges which point _into_ $v$.
-    It is denoted $"deg"^- v$ (a minus sign in the exponent or subscript).
+    It is denoted $"deg"^- v$ (a minus sign in superscript or subscript).
 
     Similarly, the *outdegree* $"deg"^+ v$ is the number of edges pointing _out_ of $v$.
 
@@ -182,6 +157,7 @@ We will see more tree problems when we discuss binary trees, a special case of t
 
 #problem_box(solution: [
     Ask anyone in your group if they have taken ICS 6D and are familiar with topological sorting.
+    In any case, this problem is solvable using some variant of a breadth or depth-first search (figure out which).
 ])[
     Solve #lc_link(207, "course-schedule") and #lc_link(210, "course-schedule-ii").
     The first simply asks you if a solution to the problem exists.
@@ -198,8 +174,6 @@ We will see more tree problems when we discuss binary trees, a special case of t
 
 == Challenge
 
-You may want to know #link("https://en.wikipedia.org/wiki/Dijkstra's_algorithm")[Dijkstra's] for these.
-
 #problem_box[
     Try some of these:
 
@@ -207,3 +181,6 @@ You may want to know #link("https://en.wikipedia.org/wiki/Dijkstra's_algorithm")
     - #lc_link(787, "cheapest-flights-within-k-stops")
     - #lc_link(743, "network-delay-time")
 ]
+
+In these problems, particularly the last two, you will begin to invent a way to find shortest path(s) through a graph.
+You will eventually (or have already learned) #link("https://en.wikipedia.org/wiki/Dijkstra's_algorithm")[Dijkstra's algorithm], so you can see whether your own algorithm makes sense.
