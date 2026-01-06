@@ -105,7 +105,7 @@ def fib(n: int) -> int:
 ]
 
 It is often possible to organize these sub-problems in some way.
-For example, for the Fibonacci sequence above, you can organize the problems in a line in order based on $n$.
+For example, for the Fibonacci sequence above, you can organize the problems in a linear order based on $n$.
 There is a notion of dimensionality for dynamic programming, loosely defined as the number of inputs.
 The Fibonacci calculation is one-dimensional, for example.
 
