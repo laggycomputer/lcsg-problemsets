@@ -75,8 +75,7 @@ class TreeNode:
 Notice again that each node has a value; this is very important especially for the next topic.
 
 For complete trees it is also possible to represent the tree as an array of values; for the node at index $i$ then its children are at indices $2i + 1$ and $2i + 2$.
-This naturally allows for breadth-first traversal and may be more common in low-level languages.
-LeetCode writes their problem inputs in this format (even if actual representation as passed to your code is usually reference-based).
+This naturally allows for breadth-first traversal and is more common in low-level languages.
 
 == Some simple operations
 
@@ -108,12 +107,12 @@ There are too many to assign problems for, but here are a few in quick successio
     + Repeatedly narrow down the interval by halving it until you watch the theft occur.
 
     This takes $O(log n)$ time.
-    Even if you had a surveillance feed equal in length to the age of the universe#footnote[assuming our whole universe was in a hot dense state], and it took 5 seconds to check a point in time, you would be able to find when the bike was stolen in under 5 minutes.
+    Even if you had a surveillance feed equal in length to the estimated age of the universe, and it took 5 seconds to check a point in time, you would be able to find when the bike was stolen in under 5 minutes.
 ])[
     Police sometimes struggle to quickly determine when exactly an object was stolen, even if the theft is caught on camera#footnote[
         This is a retelling of an #link("https://www.thetimes.com/article/i-have-owned-11-bikes-this-is-how-they-were-stolen-d3r553gx3")[article] in _The Times_.
     ].
-    Suppose I have a camera feed of a bike rack for a 10-hour period of last night.
+    Suppose I have a camera feed looking a bike rack for a 10-hour period from last night.
     During this same time period, someone reports a certain bike on that rack was stolen.
     Imagine it takes roughly 30 seconds to steal the bike; how many times do I have to scrub the video to know, down to the minute, when the bike was stolen?
     What time complexity is this problem?
@@ -126,7 +125,7 @@ In more earthly terms, a binary search is generally applied to a sorted list as 
 + Eventually, you will find where in the list your element is, or where it should be inserted such that the list remains sorted.
 
 Obviously this requires that the elements in the list be comparable#footnote[Strictly speaking, a total ordering must exist.]; i.e. that it makes sense (in mathematical terms, "is defined") to ask whether one element is greater or less than another.
-Binary search is why sorting a list can be so effective; for a one-time cost of $O(n log n)$ time (to sort the list), any element (or its insertion position) can be found in $log n$ time.
+Binary search is one reason why sorting a list can be so effective; for a one-time cost of $O(n log n)$ time (to sort the list), any element (or its insertion position) can be found in $log n$ time.
 
 == BST
 
@@ -138,7 +137,6 @@ There is a way to precompute and store this binary search; this is a binary sear
     - The right child of $v$ (if it exists) and its children all have values greater than the value assigned to $v$.
 ]
 
-<bst-traversal>
 Also note that *the in-order traversal of a BST traverses nodes in increasing label order*.
 
 = On your own
@@ -169,7 +167,7 @@ For these two, think about the problem in terms of cases and what do do in each 
     #lc_link(111, "minimum-depth-of-binary-tree")
 ]
 
-== Lock in
+== Not warmup
 
 There's a reason we covered dynamic programming first.
 
@@ -220,8 +218,6 @@ There's a reason we covered dynamic programming first.
     Hint: Suppose, in the worst case, you try to delete an element with left and right children, each with their own subtree.
     Think about which element ought to replace the one to be deleted.
     Once you figure this out, all you need to do is reassign some references and account for the cases where some or all of these children and subtrees are missing.
-
-    Second hint: Given the relationship between nodes on a BST, #link(<bst-traversal>)[some traversal methods are better than others].
 ])[
     *Capstone*: #lc_link(450, "delete-node-in-a-bst")
 ]
