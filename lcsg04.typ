@@ -175,7 +175,7 @@ This warrants some new definitions.
 
     Hint: find a way to reduce the problem iteratively; how can you change the input graph in a way that makes it simpler without changing the solution?
 
-    You will learn much more about graph reduction in ICS 46, if you take it.
+    You will learn much more about graph reduction in CS 161.
 ]
 
 We will see more tree problems when we discuss binary trees, a special case of trees.
