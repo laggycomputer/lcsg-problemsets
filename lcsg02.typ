@@ -23,7 +23,6 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em, first-line-indent: (amount: 0.25in, all: true))
 
 #pagebreak()
 
@@ -51,8 +50,8 @@ Then there are two very simple ways to manage this inventory#footnote[
     Thie shipment which came last (hence, latest) will be sold first.
 
 These resemble two other structures you may be familiar with:
-+ Imagine we arranged our shipments on a shelf.
-    When a shipment comes in, we push it in on one side (suppose the right side) and let all the shipments slide left.
++ Imagine we arranged our shipments in a single-file line on a shelf.
+    When a shipment comes in, we push it in on one side (suppose we choose the right side) and let all the shipments slide left.
     When we sell an item, we take the leftmost one at all times.
     This is how the line at the bus stop works.
     If you're British, it's a *queue*.
@@ -93,7 +92,7 @@ We will walk through some here.
             If you can't, this closing brace is unmatched and you can answer in the negative immediately.
         - Check what you just popped.
             If it doesn't match (i.e. isn't the correct kind of opening brace), this closing brace is unmatched and you can answer "no".
-            If it does match, you can continue on.
+            If it does match, you can continue.
 
     When you run out of characters:
         - If the stack isn't empty, there was at least one unmatched opening brace.
@@ -101,7 +100,7 @@ We will walk through some here.
             You answer "yes".
 ])[
     A very popular LeetCode problem is #lc_link(20, "valid-parentheses").
-    You should use either a queue or stack, and move through the string left to right or right to left and update this queue or stack as you go.
+    You should use either a queue or stack (there is a more correct answer between these), and move through the string left to right or right to left and update this queue or stack as you go.
 ]
 
 Python code for the above:
@@ -140,7 +139,7 @@ For example, an list could be used as a stack if we simply add or remove the las
 ]
 
 An array is defined to be contiguous in memory; that is, one element is stored right after the other, in their correct order.
-However, this means that if an array grows larger than the amount of space given, then the entire array has to be moved (_i.e._ copied) somewhere else where it's allowed to grow further.
+However, this means that if an array needs to grow larger than the amount of space given, then the entire array has to be moved (_i.e._ copied) somewhere else where it's allowed to grow further.
 Linked lists are a way to avoid this.
 We break the constraint that elements all have to be stored together.
 We can store the elements anywhere we want, but now each element must store both a value and the location of the next element.
@@ -160,6 +159,8 @@ The granular details of linked lists, such as their upsides and downsides over a
 = On your own
 
 #problem_box[
+    A classic in the "can undergrads still reverse a linked list?" genre.
+    If you haven't taken ICS 45C, and this problem is too difficult, try again after you've had more hands-on experience with linked lists.
     #lc_link(143, "reorder-list")
 ]
 
@@ -175,7 +176,7 @@ The granular details of linked lists, such as their upsides and downsides over a
 ]
 
 #problem_box(solution: [
-    Hint: For $O(n)$, think about how much time each _person_ takes.
+    Hint: To achieve $O(n)$ time, think about how much time each _person_ takes.
 ])[
     #lc_link(2073, "time-needed-to-buy-tickets")
 
@@ -186,9 +187,10 @@ The granular details of linked lists, such as their upsides and downsides over a
 == Capstone
 
 You should attempt at least one of these, but preferably both.
+The implementations are simple, but require some careful thought to discover.
 
 #problem_box[
-    *Capstone 1*: #lc_link(225, "implement-stack-using-queues") \ 
+  *Capstone 1*: #lc_link(225, "implement-stack-using-queues") \ 
   Bonus points if you can find the one-queue solution too.
 
   *Capstone 2*: #lc_link(232, "implement-queue-using-stacks")
