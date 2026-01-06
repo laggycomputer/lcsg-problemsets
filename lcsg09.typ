@@ -24,8 +24,6 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
-
 #pagebreak()
 
 This week, we stay in the realm of very simple patterns which end up being immensely powerful in many applications.

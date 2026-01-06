@@ -22,8 +22,6 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
-
 #pagebreak()
 
 We will take a break from graph theory this week.

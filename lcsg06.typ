@@ -23,8 +23,6 @@
 #outline()
 
 #set text(top-edge: 0.7em, bottom-edge: -0.3em)
-#set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
-
 #pagebreak()
 
 This week includes a collection of simpler problems which exercise basic concepts, followed by stronger problems exercising previous topics in combination with this week's topics.

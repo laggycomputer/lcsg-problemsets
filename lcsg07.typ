@@ -22,8 +22,6 @@
 
 #outline()
 
-#set par(leading: 1em, first-line-indent: (amount: 0.5in, all: true))
-
 #pagebreak()
 
 This week, we return to graph theory and introduce a data structure with it.
