@@ -61,8 +61,8 @@ These resemble two other structures you may be familiar with:
     This is a *stack*.
 
 #definition_box[
-    The *queue* is the linear *LIFO* data structure.
-    The *stack* is the linear *FIFO* data structure.
+    The *queue* is the linear *FIFO* data structure.
+    The *stack* is the linear *LIFO* data structure.
     In both cases, but particularly with a stack, we talk about #strong[push]ing (adding) and #strong[pop]ping (removing) elements.
     We also may be interested in #strong[peek]ing at whether we can remove an element from the queue or stack, _without actually removing it_.
     The current size of a queue or stack is usually available also.
