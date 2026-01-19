@@ -50,7 +50,7 @@ To do this, we need some definitions#footnote[
 #definition_box[
     The number of vertices in a graph, $|V|$, is called the *order* of the graph.
     The number of edges $|E|$ is called the *size*.
-    The number of edges connected to a vertex is called the degree of that vertex.
+    The number of edges connected to a vertex is called the *degree* of that vertex.
 ]
 
 It is possible to have "self-edges"; edges where both endpoints are the same.
