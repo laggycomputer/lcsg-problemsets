@@ -86,7 +86,9 @@ Next, some basic results which will solidify your understanding:
     The list of vertices $(v_1, v_2, dots, v_n)$ traversed by this walk is called its *vertex sequence*. \
     If all the edges are distinct, the walk is also called a *trail*. \
     A trail where $v_1 = v_n$ is called a *cycle*. \
-    If the edges of a walk are distinct, it can also be called a *path*.
+ 
+    If the vertices of a walk are distinct, it can also be called a *path*.
+    This means that all walks are also trails, since you can't repeat an edge if you never visit either of its vertices a second time.
 ]
 
 == Trees
