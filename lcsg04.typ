@@ -134,7 +134,7 @@ This warrants some new definitions.
 ])[
     A directed Eulerian trail exists on directed graph $G$ if and only if:
     - There is exactly one vertex $v$ where $"deg"^+ v = "deg"^- v + 1$, one other vertex $u$ where $"deg"^- u = "deg"^+ u + 1$, and all other vertices have equal indegree and outdegree.
-    - There are no unbalanced vertices, in which case any such Eulerian trail must also be an Eulerian cycle.
+    - There are no unbalanced vertices (_i.e._ vertices where the indegree and outdegree are not equal), in which case any such Eulerian trail must also be an Eulerian cycle.
     Explain why.
 ]
 
@@ -150,7 +150,7 @@ This warrants some new definitions.
 
     Hint: find a way to reduce the problem iteratively; how can you change the input graph in a way that makes it simpler without changing the solution?
 
-    You will learn much more about graph reduction in CS 161.
+    You will learn much more about graph reduction in upper-division CS coursework.
 ]
 
 We will see more tree problems when we discuss binary trees, a special case of trees.
