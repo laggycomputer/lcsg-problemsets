@@ -120,10 +120,10 @@ Top-down approaches are often easier to reason about and implement, because you 
 *To solve a dynamic programming problem*:
 - Find a base case or cases; is there some input to the problem which makes it trivial?
     In that case, what is the solution?
+- Given every smaller version of the problem is already solved, how can you solve a slightly larger version?
 - Find a way to organize the problem and sub-problems.
     For example, if it has two nonnegative or positive integer inputs, a grid may be appropriate to understand the way sub-problems depend on one another.
     If you can find such an organization, it will greatly aid in implementing a solution.
-- Given every smaller version of the problem is already solved, how can you solve a slightly larger version?
 
 = Topic 2: Memoization
 
