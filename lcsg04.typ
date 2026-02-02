@@ -145,13 +145,17 @@ This warrants some new definitions.
     #lc_link(997, "find-the-town-judge")
 ]
 
-#problem_box[
-    #lc_link(310, "minimum-height-trees")
+#problem_box(solution: [
+    Hint 1: What is the answer for a tree composed of zero, one, or two vertices?
 
-    Hint: find a way to reduce the problem iteratively; how can you change the input graph in a way that makes it simpler without changing the solution?
+    Hint 2: There is an easy rule by which you can remove parts of the the given tree, making it simpler, without changing the answer to the problem.
+    If you perform this step enough times, the result from Hint 2 will become useful.
 
     You will learn much more about graph reduction in upper-division CS coursework.
-]
+
+])[
+    #lc_link(310, "minimum-height-trees")
+ ]
 
 We will see more tree problems when we discuss binary trees, a special case of trees.
 
