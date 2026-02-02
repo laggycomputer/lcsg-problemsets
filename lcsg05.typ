@@ -68,7 +68,7 @@ Of course, there are some numerical parameters and interpretation left to be don
     a problem like the factorial function#footnote[over natural numbers] is not considered dynamic programming since each step depends on one non-overlapping sub-problem.
 - However, solving the problem over smaller overlapping chunks is still useful and can help us create the solution for a full file.
 
-Formally these properties are called optimal substructure (if the optimal overall solution is a function of optimal solutions of smaller versions of the problem) and overlapping sub-problems (if sub-problems overlap completely, because the same sub-problem is required more than once, or if they partially overlap).
+Formally these properties are called *optimal substructure* (if the optimal overall solution is a function of optimal solutions of smaller versions of the problem) and *overlapping sub-problems* (if sub-problems overlap completely, because the same sub-problem is required more than once, or if non-identical subproblems partially overlap).
 
 To solve a dynamic programming problem, combine the solutions to *overlapping* sub-problems in some way.
 *Dynamic programming is a generalization of recursion.*
@@ -76,7 +76,7 @@ It can also be seen as a computational application of functional equations.
 
 <fib-dp>
 #problem_box(solution: [
-    (syntax highlighting wasn't updated for python 3.10 my bad g)
+    (syntax highlighting not updated for python 3.10 my bad g)
     ```py
 def fib(n: int) -> int:
     match n:
@@ -111,8 +111,11 @@ The Fibonacci calculation is one-dimensional, for example.
 
 Also note the difference between *top-down* and *bottom-up* dynamic programming.
 This notion is common to recursion in general and describes whether you solve the smallest or largest version of the problem first.
-When you use recursion to solve a dynamic programming problem, a top-down approach is best (start with the biggest version and solve smaller ones on demand).
+When you use recursion to solve a dynamic programming problem, a top-down approach is best (start with the biggest version, which will involve solving subproblems on demand).
 But you may also be able to solve it iteratively (usually a for-loop) if you solve bottom-up instead (compute the smallest version first).
+It may be a useful exercise to solve dynamic programming problems using both approaches, though it doesn't matter which one you start with.
+Bottom-up approaches often use less memory because you can forget the results of smaller subproblems once they have been used to compute larger subproblems.
+Top-down approaches are often easier to reason about and implement, because you easily translate "this larger subproblem depends on the smaller problem in this exact way" into a function which calls itself.
 
 *To solve a dynamic programming problem*:
 - Find a base case or cases; is there some input to the problem which makes it trivial?
