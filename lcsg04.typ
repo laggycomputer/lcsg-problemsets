@@ -40,7 +40,7 @@
     Imagine we are walking across bridges (edges) which collapse as we run along them.
     For every $v_2, dots, v_(n-1)$ (i.e. the vertices which are not the endpoints) on our trail, we must both arrive at that vertex and leave.
     This "consumes" two bridges.
-    Thus the degree of these non-terminus vertices (the number of bridges left) decreases in pairs.
+    Thus the degree of these non-terminus vertices (which is twice the number of bridges left) decreases in pairs.
 
     The exceptions are the first and last vertex.
     If there are two vertices with odd degree, they must be the start and end (or vice versa) of the path.
